@@ -1,0 +1,12 @@
+C:\Users\harab\source\repos\CtrlV\CtrlV\bin\Debug\CtrlV.exe.config
+C:\Users\harab\source\repos\CtrlV\CtrlV\bin\Debug\CtrlV.exe
+C:\Users\harab\source\repos\CtrlV\CtrlV\bin\Debug\CtrlV.pdb
+C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.csprojAssemblyReference.cache
+C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.Form1.resources
+C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.Properties.Resources.resources
+C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.csproj.GenerateResource.cache
+C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.exe
+C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.pdb
+C:\Users\harab\source\repos\CtrlV\CtrlV\bin\Debug\Newtonsoft.Json.dll
+C:\Users\harab\source\repos\CtrlV\CtrlV\bin\Debug\Newtonsoft.Json.xml
+C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.csproj.CopyComplete
