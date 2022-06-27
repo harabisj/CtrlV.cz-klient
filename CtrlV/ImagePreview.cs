@@ -1,19 +1,13 @@
 ﻿using CtrlV.Data;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace CtrlV
 {
     public partial class ImagePreview : Form
     {
-        UploadedImage ui;
+        private readonly UploadedImage ui;
 
         public ImagePreview(UploadedImage ui)
         {
@@ -21,12 +15,12 @@ namespace CtrlV
 
             this.ui = ui;
 
-            pictureBox1.Image = CtrlvApi.FetchImage(ui);
+            ImgPreview.Image = CtrlvApi.FetchImage(ui);
         }
 
         private void showInBrowserButton_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://ctrlv.cz/" + ui.link);
+            Process.Start("https://ctrlv.cz/" + ui.link);
         }
 
         private void deleteButton_Click(object sender, EventArgs e)

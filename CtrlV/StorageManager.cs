@@ -1,14 +1,11 @@
 ﻿using CtrlV.Data;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CtrlV
 {
-    class StorageManager
+    internal class StorageManager
     {
         public static void StoreImage(UploadResponse ur)
         {

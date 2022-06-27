@@ -29,26 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImagePreview));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ImgPreview = new System.Windows.Forms.PictureBox();
             this.showInBrowserButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgPreview)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // ImgPreview
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 64);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1512, 1130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ImgPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ImgPreview.Location = new System.Drawing.Point(9, 51);
+            this.ImgPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ImgPreview.Name = "ImgPreview";
+            this.ImgPreview.Size = new System.Drawing.Size(760, 483);
+            this.ImgPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ImgPreview.TabIndex = 0;
+            this.ImgPreview.TabStop = false;
             // 
             // showInBrowserButton
             // 
-            this.showInBrowserButton.Location = new System.Drawing.Point(12, 12);
+            this.showInBrowserButton.Location = new System.Drawing.Point(9, 10);
+            this.showInBrowserButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.showInBrowserButton.Name = "showInBrowserButton";
-            this.showInBrowserButton.Size = new System.Drawing.Size(368, 46);
+            this.showInBrowserButton.Size = new System.Drawing.Size(276, 37);
             this.showInBrowserButton.TabIndex = 1;
             this.showInBrowserButton.Text = "Zobrazit v prohlížeči";
             this.showInBrowserButton.UseVisualStyleBackColor = true;
@@ -56,9 +61,10 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(386, 12);
+            this.deleteButton.Location = new System.Drawing.Point(290, 10);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(368, 46);
+            this.deleteButton.Size = new System.Drawing.Size(276, 37);
             this.deleteButton.TabIndex = 1;
             this.deleteButton.Text = "Odstranit obrázek";
             this.deleteButton.UseVisualStyleBackColor = true;
@@ -66,26 +72,27 @@
             // 
             // ImagePreview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1536, 1206);
+            this.ClientSize = new System.Drawing.Size(778, 544);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.showInBrowserButton);
-            this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Controls.Add(this.ImgPreview);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(500, 500);
             this.Name = "ImagePreview";
             this.Text = "Náhled obrázku";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgPreview)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ImgPreview;
         private System.Windows.Forms.Button showInBrowserButton;
         private System.Windows.Forms.Button deleteButton;
     }

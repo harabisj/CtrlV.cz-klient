@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace CtrlV.Data
 {
-    class UploadedImages
+    internal class UploadedImages
     {
         public List<UploadedImage> images;
     }
