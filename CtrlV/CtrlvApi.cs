@@ -1,20 +1,15 @@
 ﻿using CtrlV.Data;
-using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace CtrlV
 {
-    class CtrlvApi
+    internal class CtrlvApi
     {
-        static readonly HttpClient client = new HttpClient();
+        private static readonly HttpClient client = new HttpClient();
 
         public static string UploadImage(byte[] bytes)
         {
@@ -36,7 +31,7 @@ namespace CtrlV
         public static void EditImage(string id, string token, int deleteType)
         {
             client.GetAsync(
-                "https://ctrlv.cz/edit.php?"+
+                "https://ctrlv.cz/edit.php?" +
                 "imgId=" + id +
                 "&action=" + "liveliness" +
                 "&token=" + token +

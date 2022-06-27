@@ -10,7 +10,7 @@ namespace CtrlV2
 {
     internal class CtrlvApi : IDisposable
     {
-        HttpClient client;
+        private readonly HttpClient client;
 
         public CtrlvApi()
         {
@@ -19,9 +19,9 @@ namespace CtrlV2
 
         public async Task<string> UploadImage(byte[] bytes)
         {
-            using (MemoryStream ms = new MemoryStream(bytes))
+            using (MemoryStream ms = new(bytes))
             {
-                StreamContent content = new StreamContent(ms);
+                StreamContent content = new(ms);
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/lukyer-binary-paster-data");
 
                 HttpResponseMessage response = await client.PostAsync("https://ctrlv.cz/upload.php", content);
@@ -66,9 +66,9 @@ namespace CtrlV2
 
         private async Task<BitmapImage> FetchImage(string url)
         {
-            var response = await client.GetAsync(url);
+            HttpResponseMessage? response = await client.GetAsync(url);
 
-            BitmapImage img = new BitmapImage();
+            BitmapImage img = new();
             img.BeginInit();
             img.CacheOption = BitmapCacheOption.OnLoad;
             img.StreamSource = response.Content.ReadAsStream();

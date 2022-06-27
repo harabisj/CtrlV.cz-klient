@@ -3,7 +3,6 @@ using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace CtrlV2
 {
@@ -11,7 +10,7 @@ namespace CtrlV2
 
     internal class StorageManager : IList<ImageData>
     {
-        List<ImageData> images;
+        private List<ImageData> images;
 
         public event StorageChangedEventHandler StorageChanged;
 
@@ -58,9 +57,15 @@ namespace CtrlV2
             StorageChanged?.Invoke();
         }
 
-        public ImageData GetImage(string link) => images.First(x => x.Link == link);
+        public ImageData GetImage(string link)
+        {
+            return images.First(x => x.Link == link);
+        }
 
-        public int IndexOf(ImageData item) => images.IndexOf(item);
+        public int IndexOf(ImageData item)
+        {
+            return images.IndexOf(item);
+        }
 
         public void Insert(int index, ImageData item)
         {
@@ -87,9 +92,15 @@ namespace CtrlV2
             Save();
         }
 
-        public bool Contains(ImageData item) => images.Contains(item);
+        public bool Contains(ImageData item)
+        {
+            return images.Contains(item);
+        }
 
-        public void CopyTo(ImageData[] array, int arrayIndex) => images.CopyTo(array, arrayIndex);
+        public void CopyTo(ImageData[] array, int arrayIndex)
+        {
+            images.CopyTo(array, arrayIndex);
+        }
 
         public bool Remove(ImageData item)
         {
@@ -98,8 +109,14 @@ namespace CtrlV2
             return flag;
         }
 
-        public IEnumerator<ImageData> GetEnumerator() => images.GetEnumerator();
+        public IEnumerator<ImageData> GetEnumerator()
+        {
+            return images.GetEnumerator();
+        }
 
-        IEnumerator IEnumerable.GetEnumerator() => images.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return images.GetEnumerator();
+        }
     }
 }

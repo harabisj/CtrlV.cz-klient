@@ -2,23 +2,14 @@
 using Microsoft.Toolkit.Uwp.Notifications;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Interop;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CtrlV2
 {
@@ -36,11 +27,10 @@ namespace CtrlV2
         private const int GWL_STYLE = -16;
         private const int WS_MAXIMIZEBOX = 0x10000;
         private const int WS_MINIMIZEBOX = 0x20000;
+        private bool close = false;
+        private readonly CtrlvApi api;
+        private readonly StorageManager storage;
 
-        bool close = false;
-        readonly CtrlvApi api;
-        readonly StorageManager storage;
-        
         public MainWindow()
         {
             InitializeComponent();
@@ -60,7 +50,7 @@ namespace CtrlV2
         private async void Storage_StorageChanged()
         {
             ImagesList.Items.Clear();
-            foreach (var image in storage)
+            foreach (ImageData? image in storage)
             {
                 if (image.Image is null)
                     image.Image = await App.API.FetchImage(image);
@@ -101,9 +91,9 @@ namespace CtrlV2
             {
                 try
                 {
-                    PngBitmapEncoder png = new PngBitmapEncoder();
+                    PngBitmapEncoder png = new();
                     byte[] buffer;
-                    using (MemoryStream ms = new MemoryStream())
+                    using (MemoryStream ms = new())
                     {
                         png.Frames.Add(BitmapFrame.Create(Clipboard.GetImage()));
                         png.Save(ms);
@@ -114,7 +104,7 @@ namespace CtrlV2
                     UploadResponse ur = JsonConvert.DeserializeObject<UploadResponse>(response);
 
                     Clipboard.SetText("https://ctrlv.cz/" + ur.Link);
-                    ImageData data = new ImageData(ur);
+                    ImageData data = new(ur);
                     storage.Add(data);
 
                     if (storage.DeleteType != 4)

@@ -1,5 +1,4 @@
 ﻿using CtrlV2.Data;
-using System;
 using System.Diagnostics;
 using System.Windows;
 
@@ -10,7 +9,7 @@ namespace CtrlV2
     /// </summary>
     public partial class PreviewWindow : Window
     {
-        ImageData data;
+        private readonly ImageData data;
 
         public PreviewWindow(ImageData data)
         {

@@ -12,7 +12,7 @@ namespace CtrlV2
             InitializeComponent();
 
             SaveTime.Items.Clear();
-            foreach (var type in App.DeleteTypes)
+            foreach (string type in App.DeleteTypes)
                 SaveTime.Items.Add(type);
 
             SaveTime.SelectedIndex = App.Storage.DeleteType;
