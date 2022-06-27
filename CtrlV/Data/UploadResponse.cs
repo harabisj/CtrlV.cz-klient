@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CtrlV.Data
 {
-    class UploadResponse
+    public class UploadResponse
     {
         [JsonProperty]
         public float delay;

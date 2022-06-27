@@ -1,12 +1,19 @@
-C:\Users\harab\source\repos\CtrlV\CtrlV\bin\Debug\CtrlV.exe.config
-C:\Users\harab\source\repos\CtrlV\CtrlV\bin\Debug\CtrlV.exe
-C:\Users\harab\source\repos\CtrlV\CtrlV\bin\Debug\CtrlV.pdb
 C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.csprojAssemblyReference.cache
-C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.Form1.resources
 C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.Properties.Resources.resources
 C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.csproj.GenerateResource.cache
-C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.exe
-C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.pdb
 C:\Users\harab\source\repos\CtrlV\CtrlV\bin\Debug\Newtonsoft.Json.dll
 C:\Users\harab\source\repos\CtrlV\CtrlV\bin\Debug\Newtonsoft.Json.xml
 C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.csproj.CopyComplete
+C:\Users\harab\source\repos\CtrlV\CtrlV\bin\Debug\CtrlV.cz klient.exe.config
+C:\Users\harab\source\repos\CtrlV\CtrlV\bin\Debug\CtrlV.cz klient.exe
+C:\Users\harab\source\repos\CtrlV\CtrlV\bin\Debug\CtrlV.cz klient.pdb
+C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.cz klient.exe
+C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.cz klient.pdb
+C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.ImagePreview.resources
+C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.Main.resources
+C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.Settings.resources
+C:\Users\harab\source\repos\CtrlV\CtrlV\bin\Debug\CtrlV.cz klient.exe.manifest
+C:\Users\harab\source\repos\CtrlV\CtrlV\bin\Debug\CtrlV.cz klient.application
+C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.cz klient.TrustInfo.xml
+C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.cz klient.exe.manifest
+C:\Users\harab\source\repos\CtrlV\CtrlV\obj\Debug\CtrlV.cz klient.application
