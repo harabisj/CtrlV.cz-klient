@@ -1,0 +1,22 @@
+﻿<Window x:Class="CtrlV2.PreviewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CtrlV2"
+        mc:Ignorable="d"
+        Title="Náhled obrázku" Height="450" Width="800" Icon="/ctrlv.png" MinWidth="500" MinHeight="350" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="2.5,5">
+            <Button Content="Zobrazit v prohlížeči" Width="150" Margin="2.5,0" Click="ShowBrowser_Click" />
+            <Button Content="Odstranit obrázek" Width="150" Click="DeleteImage_Click" />
+        </StackPanel>
+
+        <Image x:Name="ImageView" Margin="5" Grid.Row="1" />
+    </Grid>
+</Window>
