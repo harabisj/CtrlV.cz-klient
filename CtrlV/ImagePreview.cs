@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,12 +22,12 @@ namespace CtrlV
 
             this.ui = ui;
 
-            pictureBox1.Image = CtrlvApi.FetchImage(ui);
+            ImgPreview.Image = CtrlvApi.FetchImage(ui);
         }
 
         private void showInBrowserButton_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://ctrlv.cz/" + ui.link);
+            Process.Start("https://ctrlv.cz/" + ui.link);
         }
 
         private void deleteButton_Click(object sender, EventArgs e)

@@ -30,12 +30,12 @@ namespace CtrlV
         private void ReloadImages()
         {
             imageList.Images.Clear();
-            listView1.Items.Clear();
+            ImagesList.Items.Clear();
 
             foreach (UploadedImage ui in StorageManager.LoadImages())
             {
                 imageList.Images.Add(ui.link, CtrlvApi.FetchImage(ui));
-                listView1.Items.Add(ui.link, ui.link);
+                ImagesList.Items.Add(ui.link, ui.link);
             }
         }
 
@@ -81,18 +81,18 @@ namespace CtrlV
                 notifyIcon.ShowBalloonTip(
                     2,
                     "Chyba!",
-                    "Došlo k neznámé chybě...",
+                    $"Došlo k chybě ({ex.Message})",
                     ToolTipIcon.None
                 );
             }
         }
 
-        private void listView1_DoubleClick(object sender, EventArgs e)
+        private void ImagesList_DoubleClick(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count != 1)
+            if (ImagesList.SelectedItems.Count != 1)
                 return;
 
-            (new ImagePreview(StorageManager.GetImage(listView1.SelectedItems[0].Text))).ShowDialog();
+            (new ImagePreview(StorageManager.GetImage(ImagesList.SelectedItems[0].Text))).ShowDialog();
             ReloadImages();
         }
 

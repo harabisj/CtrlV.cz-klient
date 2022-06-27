@@ -35,7 +35,7 @@
             this.galleryMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.ImagesList = new System.Windows.Forms.ListView();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.notifyIconMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -57,40 +57,41 @@
             this.settingsMenuItem,
             this.exitMenuItem});
             this.notifyIconMenuStrip.Name = "notifyIconMenuStrip";
-            this.notifyIconMenuStrip.Size = new System.Drawing.Size(196, 118);
+            this.notifyIconMenuStrip.Size = new System.Drawing.Size(162, 100);
             // 
             // galleryMenuItem
             // 
             this.galleryMenuItem.Name = "galleryMenuItem";
-            this.galleryMenuItem.Size = new System.Drawing.Size(300, 38);
+            this.galleryMenuItem.Size = new System.Drawing.Size(161, 32);
             this.galleryMenuItem.Text = "Galerie";
             this.galleryMenuItem.Click += new System.EventHandler(this.galleryMenuItem_Click);
             // 
             // settingsMenuItem
             // 
             this.settingsMenuItem.Name = "settingsMenuItem";
-            this.settingsMenuItem.Size = new System.Drawing.Size(300, 38);
+            this.settingsMenuItem.Size = new System.Drawing.Size(161, 32);
             this.settingsMenuItem.Text = "Nastavení";
             this.settingsMenuItem.Click += new System.EventHandler(this.settingsMenuItem_Click);
             // 
             // exitMenuItem
             // 
             this.exitMenuItem.Name = "exitMenuItem";
-            this.exitMenuItem.Size = new System.Drawing.Size(300, 38);
+            this.exitMenuItem.Size = new System.Drawing.Size(161, 32);
             this.exitMenuItem.Text = "Ukončit";
             this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
             // 
-            // listView1
+            // ImagesList
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.LargeImageList = this.imageList;
-            this.listView1.Location = new System.Drawing.Point(12, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(621, 511);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Tile;
-            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
+            this.ImagesList.HideSelection = false;
+            this.ImagesList.LargeImageList = this.imageList;
+            this.ImagesList.Location = new System.Drawing.Point(9, 10);
+            this.ImagesList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ImagesList.Name = "ImagesList";
+            this.ImagesList.Size = new System.Drawing.Size(467, 410);
+            this.ImagesList.TabIndex = 4;
+            this.ImagesList.UseCompatibleStateImageBehavior = false;
+            this.ImagesList.View = System.Windows.Forms.View.Tile;
+            this.ImagesList.DoubleClick += new System.EventHandler(this.ImagesList_DoubleClick);
             // 
             // imageList
             // 
@@ -100,12 +101,13 @@
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 538);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(488, 430);
+            this.Controls.Add(this.ImagesList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main";
@@ -123,7 +125,7 @@
         private System.Windows.Forms.ContextMenuStrip notifyIconMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem galleryMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsMenuItem;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView ImagesList;
         private System.Windows.Forms.ImageList imageList;
         private System.Windows.Forms.ToolStripMenuItem exitMenuItem;
     }
