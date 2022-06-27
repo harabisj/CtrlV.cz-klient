@@ -51,15 +51,9 @@ namespace CtrlV2
             StorageChanged?.Invoke();
         }
 
-        public async Task LoadImages()
+        public void LoadImages()
         {
             images = JsonConvert.DeserializeObject<List<ImageData>>(Settings.Default.UploadedImages) ?? new();
-
-            foreach (var image in images)
-            {
-                if (image.Image is null)
-                    image.Image = await App.API.FetchImage(image);
-            }
 
             StorageChanged?.Invoke();
         }

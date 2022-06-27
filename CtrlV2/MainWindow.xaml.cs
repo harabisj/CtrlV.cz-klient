@@ -48,6 +48,7 @@ namespace CtrlV2
             api = App.API;
             storage = App.Storage;
             storage.StorageChanged += Storage_StorageChanged;
+            storage.LoadImages();
         }
 
         private void MainWindow_SourceInitialized(object? sender, EventArgs e)
@@ -56,16 +57,14 @@ namespace CtrlV2
             SetWindowLong(handle, GWL_STYLE, GetWindowLong(handle, GWL_STYLE) & ~WS_MAXIMIZEBOX & ~WS_MINIMIZEBOX);
         }
 
-        private async void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            await storage.LoadImages();
-        }
-
-        private void Storage_StorageChanged()
+        private async void Storage_StorageChanged()
         {
             ImagesList.Items.Clear();
             foreach (var image in storage)
             {
+                if (image.Image is null)
+                    image.Image = await App.API.FetchImage(image);
+
                 ImagesList.Items.Add(image);
             }
         }
@@ -77,7 +76,7 @@ namespace CtrlV2
 
         private void MenuItemSettings_Click(object sender, RoutedEventArgs e)
         {
-            
+            new SettingsWindow().ShowDialog();
         }
 
         private void MenuItemClose_Click(object sender, RoutedEventArgs e)

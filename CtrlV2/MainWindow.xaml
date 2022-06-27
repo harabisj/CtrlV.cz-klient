@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:tb="http://www.hardcodet.net/taskbar"
         xmlns:local="clr-namespace:CtrlV2"
-        xmlns:data="clr-namespace:CtrlV2.Data"
         mc:Ignorable="d" Visibility="Hidden" d:Visibility="Visible"
-        Title="CtrlV.cz klient" Height="400" Width="400" Icon="/ctrlv.png" Closing="Window_Closing" Loaded="Window_Loaded">
+        Title="CtrlV.cz klient" Height="400" Width="400" Icon="/ctrlv.png" Closing="Window_Closing" >
     <Grid>
 
         <tb:TaskbarIcon x:Name="TaskbarIcon" Visibility="Visible" ToolTipText="CtrlV.cz klient" IconSource="/ctrlv.ico" TrayMouseDoubleClick="TaskbarIcon_TrayMouseDoubleClick">
